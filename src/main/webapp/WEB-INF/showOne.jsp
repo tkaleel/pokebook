@@ -3,7 +3,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,11 +28,18 @@
 				<td>$${pokebook.cost }</td>
 				<td>${pokebook.description }</td>
 			</tr>
-		
+
 		</table>
-		<a href="/expenses/${pokebook.id }/edit">Edit</a>
-	
-	
+
+		<form action="/expenses/${pokebook.id }/edit" method="get">
+			 <input type="submit" class="btn-sm btn-primary" value="Edit">
+		</form>
+		<form action="/expenses/${pokebook.id}" method="post">
+			<input type="hidden" name="_method" value="delete"> <input
+				type="submit" class="btn-sm btn-danger" value="Delete">
+		</form>
+
+
 	</div>
 
 </body>

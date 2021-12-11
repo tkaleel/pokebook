@@ -42,4 +42,10 @@ public class PokebookService {
 	public Pokebook updatePokebook(Pokebook pokebook) {
 		return pokebookRepo.save(pokebook);
 	}
+	
+	
+	// ******** DELETE *******
+	public void deletePokebook(Long id) {
+		pokebookRepo.deleteById(id);
+	}
 }
