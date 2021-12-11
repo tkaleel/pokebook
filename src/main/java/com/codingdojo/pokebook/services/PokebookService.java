@@ -1,6 +1,7 @@
 package com.codingdojo.pokebook.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -22,9 +23,23 @@ public class PokebookService {
 		return pokebookRepo.findAll();
 	}
 	
+	// ******** FIND ONE ********
+	public Pokebook findPokebook(Long id) {
+		Optional<Pokebook> optionalPokebook = pokebookRepo.findById(id);
+		if(optionalPokebook.isPresent()) {
+			return optionalPokebook.get();
+		} else {
+			return null;
+		}
+	}
+	
 	// ******** CREATE ********
 	public Pokebook addPokebook(Pokebook pokebook) {
 		return pokebookRepo.save(pokebook);
 	}
 	
+	// ******** UPDATE ********
+	public Pokebook updatePokebook(Pokebook pokebook) {
+		return pokebookRepo.save(pokebook);
+	}
 }

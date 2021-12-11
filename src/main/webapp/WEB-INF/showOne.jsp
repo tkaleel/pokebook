@@ -12,6 +12,28 @@
 <title>Show One</title>
 </head>
 <body>
+	<div class="container mt-5">
+		<table class="table table-striped">
+			<tr>
+				<th>ID</th>
+				<th>Expense</th>
+				<th>Vendor</th>
+				<th>Cost</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>${pokebook.id }</td>
+				<td>${pokebook.name }</td>
+				<td>${pokebook.vendor }</td>
+				<td>$${pokebook.cost }</td>
+				<td>${pokebook.description }</td>
+			</tr>
+		
+		</table>
+		<a href="/expenses/${pokebook.id }/edit">Edit</a>
+	
+	
+	</div>
 
 </body>
 </html>

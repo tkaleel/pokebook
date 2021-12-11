@@ -22,7 +22,7 @@
 			</tr>
 			<c:forEach var="pokebook" items="${pokebooks }">
 				<tr>
-					<td>${pokebook.name }</td>
+					<td><a href="/expenses/${pokebook.id }">${pokebook.name }</a></td>
 					<td>${pokebook.vendor }</td>
 					<td>${pokebook.cost }</td>
 				</tr>
